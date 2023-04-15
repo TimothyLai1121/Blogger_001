@@ -60,3 +60,11 @@ Add a .env file for storing environment variables and a .gitignore file to exclu
 Finally, create the package.json file and server.js file to run the application and manage dependencies.
 
 ## Dependencies
+npm i sequelize
+npm i dotenv
+npm mysql2
+npm i express
+npm i express-handlebars
+npm i express-session
+npm i bcrypt
+npm i connect-session-sequelize
