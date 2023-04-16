@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 // adding sequelize const sequelize = require('../config/connection.js) later after setting up //
-// 
+// const sequelize = require('../config/connection.js');
+ 
 const User = require('./user');
 
 const Post = sequelize.define('post', {

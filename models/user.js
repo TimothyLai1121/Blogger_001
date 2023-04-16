@@ -5,12 +5,12 @@ const sequelize = require('../config/connection');
 const User = sequelize.define('user', {
     username: {
         type: Sequelize.STRING, // Sequelize.STRING means VARCHAR(255) //
-        allowNull: false // allowNull false means a username is required before creating a new user //
+        allowNull: false, // allowNull false means a username is required before creating a new user //
         unique: true // unique true means a username must be unique //
     },
     email: {
         type: Sequelize.STRING, // Sequelize.STRING means VARCHAR(255) //
-        allowNull: false // allowNull false means an email is required before creating a new user //
+        allowNull: false, // allowNull false means an email is required before creating a new user //
         unique: true // unique true means an email must be unique //
     },
     password: {
