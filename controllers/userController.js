@@ -1,5 +1,5 @@
 const db = require("../models");
-// bycrypt is a library that allows us to hash passwords //
+// bcrypt is a library that allows us to hash passwords //
 // hash is a one way encryption that makes it impossible to decrypt //
 const bcrypt = require("bcryptjs");
 
