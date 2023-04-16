@@ -10,7 +10,7 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     },
     findById: function(req, res) { // findById is a method that finds a post by its id //
-        db.Post.fineOne({ where: { id: req.params.id } })
+        db.Post.findOne({ where: { id: req.params.id } })
         .then (dbPost => res.json(dbPost))
         .catch(err => res.status(422).json(err));
     },
@@ -20,7 +20,7 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     },
     update: function(req, res) { // update is a method that updates a post by its id //
-        db.Post.update(req, body, { where : { id: req.params.id } })
+        db.Post.update(req.body, { where : { id: req.params.id } })
         .then(dbPost => res.json(dbPost))
         .catch(err => res.status(422).json(err));
     },

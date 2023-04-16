@@ -7,7 +7,7 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     },
     findById: function(req, res) { // findById is a method that finds a comment by its id //
-        db.Comment.fineOne({ where: { id: req.params.id } })
+        db.Comment.findOne({ where: { id: req.params.id } })
         .then (dbComment => res.json(dbComment))
         .catch(err => res.status(422).json(err));
     },
