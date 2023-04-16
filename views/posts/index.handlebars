@@ -1,0 +1,13 @@
+{{#extend "main"}}
+{{#block "title"}}All Posts{{/block}}
+{{#block "body"}}
+    <h1>All Posts</h1>
+    <ul>
+        {{#each posts}}
+        <li>
+            <a href="/posts/{{id}}">{{title}}</a>
+        </li>
+    </ul>
+{{/block}}
+{{/extend}}
+
