@@ -1,0 +1,18 @@
+{{#extend "main"}}
+{{#block "title"}}Edit Post{{/block}}
+{{#block "body"}}
+  <h1>Edit Post</h1>
+  <form action="/posts/{{id}}" method="post">
+    <input type="hidden" name="_method" value="put">
+    <div>
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" value="{{title}}">
+    </div>
+    <div>
+      <label for="body">Body:</label>
+      <textarea id="body" name="body">{{body}}</textarea>
+    </div>
+    <button type="submit">Update</button>
+  </form>
+{{/block}}
+{{/extend}}

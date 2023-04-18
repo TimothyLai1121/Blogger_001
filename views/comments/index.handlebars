@@ -1,0 +1,40 @@
+<!-- views/comments/index.handlebars -->
+{{! Include the header partial }}
+{{> header}}
+
+<!-- Page content -->
+<div class="container mt-4">
+  <h1>All Comments</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Comment</th>
+        <th>Author</th>
+        <th>Post</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each comments}}
+        <tr>
+          <td>{{this.id}}</td>
+          <td>{{this.content}}</td>
+          <td>{{this.author}}</td>
+          <td>{{this.post}}</td>
+          <td>
+            <!-- Edit button -->
+            <a href="/comments/edit/{{this.id}}" class="btn btn-primary">Edit</a>
+            <!-- Delete button -->
+            <form action="/comments/delete/{{this.id}}" method="post">
+              <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+{{! Include the footer partial }}
+{{> footer}}

@@ -1,0 +1,17 @@
+{{#extend "main"}}
+{{#block "title"}}New Post{{/block}}
+{{#block "body"}}
+  <h1>New Post</h1>
+  <form action="/posts" method="post">
+    <div>
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title">
+    </div>
+    <div>
+      <label for="body">Body:</label>
+      <textarea id="body" name="body"></textarea>
+    </div>
+    <button type="submit">Create</button>
+  </form>
+{{/block}}
+{{/extend}}

@@ -1,4 +1,4 @@
-const db = require('../models');
+const db = require('../models/comment');
 
 module.exports = {
     findAll: function(req, res) { // findAll is a method that finds all comments //
